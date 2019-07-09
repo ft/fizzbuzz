@@ -54,7 +54,7 @@ p &::= c; p\:|\:\epsilon
 &\langle{}\mathrm{PRINT}\:\mathit{"keep"};
 \bullet{};
 \mathrm{PRINT}\:\mathit{"calm"}\rangle{}
-(\mathrm{PRINT}\:\mathit{"nervous\,and\,never"}) \\
+\llbracket\mathrm{PRINT}\:\mathit{"nervous\,and\,never"}\rrbracket \\
 = &\:
 \mathrm{PRINT}\:\mathit{"keep"};
 \mathrm{PRINT}\:\mathit{"nervous\,and\,never"};
@@ -110,7 +110,7 @@ p &::= c; p\:|\:\epsilon
 \begin{equation*}
 \mathit{fb(n)} =
 (\mathit{base(n)} \circ{} \mathit{fizz(n)} \circ{} \mathit{buzz(n)})
-\:\mathit{SKIP}
+\:\llbracket\mathit{SKIP}\rrbracket
 \end{equation*}
 
 # Implement and Revise
