@@ -2,3 +2,7 @@
 !.gitignore
 *~
 \#*
+code/*.hi
+code/*.o
+code/FizzBuzzEx?
+code/FizzBuzzRev?
