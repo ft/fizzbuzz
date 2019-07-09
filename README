@@ -1,0 +1,20 @@
+FizzBuzz …and Embedded Domain Specific Languages — obviously.
+
+A couple of slides and code to illustrate Maciej Piróg's article “FizzBuzz
+in Haskell  by Embedding a  Domain-Specific Language” as published  in The
+Monad.Reader Issue 23, April 23, 2014¹.
+
+The article is available in PDF form in:
+
+    TheMonadReader-Issue23-FizzBuzz.pdf
+
+The slides used in a workplace lightning talk are available in:
+
+    Slides-FizzBuzzDSL.pdf
+
+The code  is mostly a transcription  of Maciej's work in  the article, and
+thus (as with the included article) The Monad.Reader's licencing terms ap-
+ply. The slides are covered by Creative Commons BY-SA 4.0².
+
+¹ https://themonadreader.files.wordpress.com/2014/04/issue23.pdf
+² https://creativecommons.org/licenses/by-sa/4.0/

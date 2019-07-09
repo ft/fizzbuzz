@@ -1,0 +1,118 @@
+## Fizzbuzz
+
+[center]
+
+What's that anyway?
+
+[/center]
+
+
+## Fizzbuzz
+
+[center]
+
+One, Two, Fizz, Four, Buzz, Fizz, ..., Fourteen, FizzBuzz, ...
+
+[/center]
+
+
+# Implementation
+
+# The Embedded Domain Specific Language
+
+## The Embedded Domain Specific Language
+
+\begin{eqnarray*}
+\begin{aligned}
+c &::= \mathrm{SKIP}\:|\:\mathrm{HALT}\:|\:\mathrm{PRINT}\:s \\
+p &::= c; p\:|\:\epsilon
+\end{aligned}
+\end{eqnarray*}
+
+## The Embedded Domain Specific Language
+
+\begin{eqnarray*}
+\begin{aligned}
+\llbracket{}\mathrm{SKIP}; p\rrbracket{} &= \llbracket{}p\rrbracket{} \\
+\llbracket{}\mathrm{HALT}; p\rrbracket{} &= \llbracket{}\epsilon\rrbracket{} = "" \\
+\llbracket{}\mathrm{PRINT}\:s; p\rrbracket{} &= s +\hspace{-1.0ex}+ \llbracket{}p\rrbracket{}
+\end{aligned}
+\end{eqnarray*}
+
+## Contexts as Building Blocks
+
+\begin{equation*}
+\langle{}\mathrm{PRINT}\:\mathit{"keep"};
+\bullet{};
+\mathrm{PRINT}\:\mathit{"calm"}\rangle{}
+\end{equation*}
+
+## Contexts as Building Blocks
+
+\begin{eqnarray*}
+\begin{aligned}
+&\langle{}\mathrm{PRINT}\:\mathit{"keep"};
+\bullet{};
+\mathrm{PRINT}\:\mathit{"calm"}\rangle{}
+(\mathrm{PRINT}\:\mathit{"nervous\,and\,never"}) \\
+= &\:
+\mathrm{PRINT}\:\mathit{"keep"};
+\mathrm{PRINT}\:\mathit{"nervous\,and\,never"};
+\mathrm{PRINT}\:\mathit{"calm"}
+\end{aligned}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\begin{aligned}
+&\langle{}\mathrm{SKIP};
+\bullet{};
+\mathrm{PRINT}\:0\rangle{}
+\circ
+\langle{}\mathrm{HALT};
+\bullet{}\rangle{} \\
+= &
+\langle{}\mathrm{SKIP};
+\mathrm{HALT};\bullet{};
+\mathrm{PRINT}\:0\rangle{}
+\end{aligned}
+\end{eqnarray*}
+
+## Fizzbuzz Contexts
+
+\vspace{-0.5cm}
+
+\begin{equation*}
+\mathit{base(n)} = \langle\bullet{};\:\mathrm{PRINT}\:n\rangle{}
+\end{equation*}
+
+\vspace{-0.5cm}
+
+\begin{equation*}
+\mathit{fizz(n)} =
+\begin{cases}
+\langle\mathrm{PRINT}\:\mathit{"fizz"};\:\bullet{};\:\mathrm{HALT}\rangle{}
+\qquad{}\mathit{if\:n\:divisible\:by\:3}\\
+\langle\bullet\rangle{}
+\end{cases}
+\end{equation*}
+
+\begin{equation*}
+\mathit{buzz(n)} =
+\begin{cases}
+\langle\mathrm{PRINT}\:\mathit{"buzz"};\:\bullet{};\:\mathrm{HALT}\rangle{}
+\qquad{}\mathit{if\:n\:divisible\:by\:5}\\
+\langle\bullet\rangle{}
+\end{cases}
+\end{equation*}
+
+\vspace{1.0cm}
+
+\begin{equation*}
+\mathit{fb(n)} =
+(\mathit{base(n)} \circ{} \mathit{fizz(n)} \circ{} \mathit{buzz(n)})
+\:\mathit{SKIP}
+\end{equation*}
+
+# Implement and Revise
+
+# Fin.

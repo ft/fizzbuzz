@@ -1,0 +1,16 @@
+*~
+\#*#
+.*
+!.gitignore
+auto
+slides.tex
+base.tex
+*.pdf
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+!graphics/*.pdf
