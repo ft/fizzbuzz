@@ -55,10 +55,11 @@ p &::= c; p\:|\:\epsilon
 \bullet{};
 \mathrm{PRINT}\:\mathit{"calm"}\rangle{}
 \llbracket\mathrm{PRINT}\:\mathit{"nervous\,and\,never"}\rrbracket \\
-= &\:
+= &\:\llbracket
 \mathrm{PRINT}\:\mathit{"keep"};
 \mathrm{PRINT}\:\mathit{"nervous\,and\,never"};
 \mathrm{PRINT}\:\mathit{"calm"}
+\rrbracket
 \end{aligned}
 \end{eqnarray*}
 
